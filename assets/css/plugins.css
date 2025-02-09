@@ -1,0 +1,45 @@
+/*-----------------------------------------------------------------------------------
+
+	Template Name: 
+	Template URI: 
+	Description: 
+	Author: design_grid
+	Author URI:
+	Version: 1.0
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+			[ All Css Plugins & Helper Classes File ]
+-----------------------------------------------------------------*/
+
+/* == bootstrap == */
+@import url("plugins/bootstrap-grid.min.css");
+
+/* == fontawesome == */
+@import url("plugins/fontawesome-all.min.css");
+@import url("fontawesome/css/fontawesome.min.css");
+@import url("fontawesome/css/fontawesome.css");
+@import url("fontawesome/css/all.min.css");
+@import url("fontawesome/css/all.css");
+
+/* == Swiper == */
+@import url("plugins/swiper.min.css");
+
+
+/* == justifiedGallery == */
+@import url("plugins/justifiedGallery.min.css");
+
+/* == magnific popup == */
+@import url("plugins/magnific-popup.min.css");
+
+/* == magnific popup == */
+@import url("plugins/youtubepopup.min.css");
+
+/* == Helper Class == */
+@import url("global.min.css");
+
+/* == twentytwenty == */
+@import url("plugins/twentytwenty.min.css");
+
+@import url("plugins/jquery.animatedheadline.css");
