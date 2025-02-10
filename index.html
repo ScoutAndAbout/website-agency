@@ -299,7 +299,7 @@
 
                                     <div class="cluch block-featured mt-30">
                                     </h1>
-                                    <p class="p-medium mt-25 max-w570 short-desc">Let's Build Your
+                                    <p class="p-medium mt-25 max-w570 short-desc" class="astronaut">Let's Build Your
                                         <strong>Website</strong>
                                         Together!
                                     </p>
@@ -874,7 +874,9 @@
 
     </script>
 
-
+    <script>
+        
+    </script>
 
     <!-- Optional JavaScript -->
 
@@ -894,26 +896,34 @@
 
 
     <script>
-        // const targetDate = new Date("2023-12-31T23:59:59").getTime();
+       document.addEventListener("DOMContentLoaded", function () {
+    let astronaut = document.querySelector(".astronaut");
 
-        // function updateCountdown() {
-        //     const now = new Date().getTime();
-        //     const timeLeft = targetDate - now;
+    window.addEventListener("scroll", () => {
+        let scrollY = window.scrollY;
 
-        //     const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        //     const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        //     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        //     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        // Moves the square up and increases its size
+        let scale = 1 + scrollY / 500; // Scale increases as you scroll
+        astronaut.style.transform = `translate(-50%, calc(-50% - ${scrollY}px)) scale(${scale})`;
 
-        //     document.getElementById("days").textContent = days < 10 ? "0" + days : days;
-        //     document.getElementById("hours").textContent = hours < 10 ? "0" + hours : hours;
-        //     document.getElementById("minutes").textContent = minutes < 10 ? "0" + minutes : minutes;
-        //     document.getElementById("seconds").textContent = seconds < 10 ? "0" + seconds : seconds;
-        // }
-
-        // updateCountdown();
-        // setInterval(updateCountdown, 1000);
+        // Fades out after scrolling 500px
+        astronaut.style.opacity = scrollY > 500 ? "0" : "1";
+    });
+});
     </script>
+
+    <style>
+        .astronaut {
+    width: 100px;
+    height: 100px;
+    background-color: white; /* Square placeholder */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+    </style>
 
     
 
